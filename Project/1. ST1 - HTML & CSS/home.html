@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      background-color: #293462;
+      padding: 0.5% 0;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0 5px;
+    }
+
+    nav ul li a,
+    nav ul li a:after,
+    nav ul li a:before {
+      transition: all .5s;
+    }
+
+    nav.fill ul li a {
+      position: relative;
+    }
+
+    nav.fill ul li a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '.';
+      color: transparent;
+      background: #fff;
+      height: 1px;
+    }
+
+    nav.fill ul li a {
+      transition: all 2s;
+    }
+
+    nav.fill ul li a:hover {
+      color: #333;
+      z-index: 10;
+    }
+
+    nav.fill ul li a:hover:after {
+      z-index: -10;
+      animation: fill 1s forwards;
+      -webkit-animation: fill 1s forwards;
+      -moz-animation: fill 1s forwards;
+      opacity: 1;
+    }
+
+    @-webkit-keyframes fill {
+      0% {
+        width: 0%;
+        height: 1px;
+      }
+
+      50% {
+        width: 100%;
+        height: 1px;
+      }
+
+      100% {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+      }
+    }
+
+    .column {
+      float: left;
+      padding: 10px;
+      height: 500px;
+    }
+
+    .left,
+    .right {
+      width: 25%;
+    }
+
+    .middle {
+      width: 50%;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .span {
+      font-weight: bold;
+      color: white;
+    }
+
+    h2,
+    p {
+      text-align: center;
+      color: navy;
+      /* font-size: 30px; */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="fill">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="row">
+      <div class="column left" style="background-color:#FF6F3C;">
+        <h2>Part 1</h2>
+        <p>Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area’s tropical spice plantations. Goa is
+          also known for its beaches, ranging from popular stretches at Baga and Palolem to those in laid-back fishing villages such as Agonda.</p>
+      </div>
+      <div class="column middle" style="background-color:#FF9A3C;">
+        <h2>Part 2</h2>
+        <p>Panaji is the state's capital, while Vasco da Gama is its largest city. The historic city of Margão in Goa still exhibits the cultural influence of the Portuguese, who first voyaged to the subcontinent in the early 16th century as
+          merchants, and conquered it soon thereafter, whereupon Goa became an overseas territory of the Portuguese Empire, part of what was then known as Portuguese India, and remained as such for about 450 years until it was annexed by India in
+          1961. Goa is visited by large numbers of international and domestic tourists each year because of its white-sand beaches, active nightlife, places of worship, and World Heritage-listed architecture. It also has rich flora and fauna because
+          it lies very close to the North Western Ghats rainforests, one of the rare biodiversity hotspots of the world.</p>
+      </div>
+      <div class="column right" style="background-color:#FFC93C;">
+        <h2>Part 3</h2>
+        <p>Tourism is generally focused on the coastal areas of Goa, with lower tourist activity inland. In 2010, there were more than 2 million tourists reported to have visited Goa, about 1.2 million of whom were from abroad. As of 2013, Goa was a
+          destination of choice for Indian and foreign tourists, particularly Britons and Russians, with limited means who wanted to party. The state was hopeful that changes could be made which would attract a more upscale demographic. Goa stands
+          6th in the Top 10 Nightlife cities in the world in National Geographic Travel. Notable nightclubs in Goa include Chronicle, Mambos and Sinq.</p>
+      </div>
+    </div>
+  </section>
+  <footer></footer>
+</body>
+
+</html>
