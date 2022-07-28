@@ -1,0 +1,16 @@
+body {
+ background: linear-gradient(to bottom, rgb(204, 229, 255), rgba(204, 229, 255,0.4));
+ font-size: 1.15em;
+ text-align: justify;
+ font-family: "Lato", sans-serif;
+}
+#title {
+ color: rgb(186, 133, 9);
+ font-family: "Sarabun", sans-serif;
+}
+#service-image {
+ height: 400px;
+ width: 70vw;
+ background: radial-gradient(circle, red 20%, blue 40%, green 55%);
+ border: 10px solid rgb(28, 28, 79);
+}
