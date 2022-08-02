@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function myFn() {
+      let n1=document.getElementById('n1').value;
+      // alert(n1);
+      let n2=document.getElementById('n2').value;
+      n1=Number(n1);
+      n2=Number(n2);
+      if(!isNaN(n1) && !isNaN(n2)){
+        document.getElementById('p1').innerHTML=n1+n2;
+      }
+      else{
+        document.getElementById('p1').innerHTML="<span style = 'color: red;'>Entered value is not a number.</span>";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" name="n1" id="n1">
+  <input type="text" name="n2" id="n2">
+  <button onclick="myFn()">Click Me</button>
+  <p id="p1"></p>
+</body>
+
+</html>

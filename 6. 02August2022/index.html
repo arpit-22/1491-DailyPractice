@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <script type="text/javascript">
+    function myFn() {
+      let n1=document.getElementById('n1').value;
+      // alert(n1);
+      if(n1==null || n1=="" || n1==" "){
+        alert("Did not write anything.");
+      }
+      else{
+        document.getElementById('p1').innerHTML=n1;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" name="n1" id="n1">
+  <button onclick="myFn()">Click Me</button>
+  <p id="p1"></p>
+</body>
+
+</html>

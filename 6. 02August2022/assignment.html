@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <script type="text/javascript">
+      function myFunc(){
+        let n1=document.getElementById('n1').value;
+        let n2=document.getElementById('n2').value;
+        n1=Number(n1);
+        n2=Number(n2);
+        let n3=n2%n1;
+        let n4=(n2-n3)/n1;
+        if(n1>n2){
+          document.getElementById('p1').innerHTML="<span style='color:red;'>No. of balls are less than the number of teams.</span>"
+        }
+        else{
+          document.getElementById('p1').innerHTML="Each member will get " + n4 + " balls and the remaining balls are " + n3 + "."
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Enter Team Number: <input type="text" name="n1" id="n1">
+    Enter no. of balls: <input type="text" name="n2" id="n2">
+    <button onclick="myFunc()">Click Here</button>
+    <p id="p1"></p>
+  </body>
+</html>
