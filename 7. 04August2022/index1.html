@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script type="text/javascript">
+    function submit() {
+      var n = document.getElementById("i1").value;
+      n = Number(n);
+      if (isNaN(n)) {
+        document.getElementById("p1").innerHTML = "Not a number";
+      } else if (n % 2 == 0) {
+        document.getElementById("p1").innerHTML = "Number given is even ";
+        if (n == 2) {
+          document.getElementById("p1").innerHTML += "and prime.";
+        } else {
+          document.getElementById("p1").innerHTML += "and is not prime.";
+        }
+      } else {
+        document.getElementById("p1").innerHTML = "Number given is odd ";
+        var i = 2;
+        var prime = true;
+        var root = Math.pow(n, 0.5);
+        while (i < root) {
+          if (n % i == 0) {
+            prime = false;
+            break;
+          }
+          i++;
+        }
+        if (prime) {
+          document.getElementById("p1").innerHTML += "and prime.";
+        } else {
+          document.getElementById("p1").innerHTML += "and is not prime.";
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <label>Enter a number :</label>
+  <input type="text" id="i1">
+  <button onClick="submit()">Check</button>
+  <p id="p1"></p>
+</body>
+
+</html>
