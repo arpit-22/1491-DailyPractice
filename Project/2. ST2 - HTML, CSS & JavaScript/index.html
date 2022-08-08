@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ST2</title>
+    <style media="screen">
+      body{
+        overflow: hidden;
+        background-color: #FF9A3C;
+      }
+      input{
+        width: 40%;
+        padding: 0.5% 0;
+      }
+      button{
+        background-color: #FF6F3C;
+        padding: 0.5% 5%;
+      }
+      #p1{
+        transition: all 1s ease-out;
+        background-color: #293462;
+        height: 0px;
+        width: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h2>Enter a number to create a Square Shape</h2>
+      <input type="text" id="num" maxlength="5">
+      <br><br>
+      <button type="button" onclick="myFunc()">Create Square Shape</button>
+      <br><br><br><br>
+      <div id="p1"></div>
+      </center>
+
+  </body>
+  <script type="text/javascript">
+    function myFunc(){
+    let txtValue=document.getElementById('num').value;
+    txtValue=Number(txtValue);
+    if (isNaN(txtValue)) {
+      alert("Error!!!! Not a number");
+    }
+    else{
+    let sum=0;
+    let count=0;
+    while(txtValue>0){
+      let rem=txtValue%10;
+      sum+=rem;
+      count++;
+      txtValue=Math.floor(txtValue/10);
+    }
+    if(count<5){
+      document.getElementById('p1').innerHTML = "";
+      alert("Error!!!! Enter a 5 digit number");
+    }
+    else{
+      document.getElementById("p1").style.height=sum+"px";
+      document.getElementById("p1").style.width=sum+"px";
+      document.getElementById("p1").style.borderRadius=sum/5+"px"
+      // document.getElementById('p1').innerHTML="<div style='border-radius:"+ sum/5 +"px; height:"+ sum +"px; width:"+  sum +"px; background-color: #293462;'></div>";
+    }
+  }
+}
+  </script>
+</html>

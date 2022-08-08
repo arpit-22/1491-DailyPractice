@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <p id='trunc'></p>
+    <p id='round'></p>
+    <p id='pow'></p>
+    <p id='sqrt'></p>
+    <p id='abs'></p>
+    <p id='max'></p>
+    <p id='min'></p>
+    <script type="text/javascript">
+      document.getElementById('trunc').innerHTML = Math.trunc(4.7);
+      document.getElementById('round').innerHTML = Math.round(4.7);
+      document.getElementById('pow').innerHTML = Math.pow(8,2);
+      document.getElementById('sqrt').innerHTML = Math.sqrt(8);
+      document.getElementById('abs').innerHTML = Math.abs(-4.4);
+      document.getElementById('max').innerHTML = Math.max(0, 150, 20, 30, -8, -200);
+      document.getElementById('min').innerHTML = Math.min(0, 150, 20, 30, -8, -200);
+    </script>
+  </body>
+</html>
