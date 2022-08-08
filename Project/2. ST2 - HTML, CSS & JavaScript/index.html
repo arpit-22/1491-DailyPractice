@@ -40,6 +40,9 @@
     let txtValue=document.getElementById('num').value;
     txtValue=Number(txtValue);
     if (isNaN(txtValue)) {
+      document.getElementById("p1").style.height="0px";
+      document.getElementById("p1").style.width="0px";
+      document.getElementById("p1").style.borderRadius="0px"
       alert("Error!!!! Not a number");
     }
     else{
@@ -52,7 +55,9 @@
       txtValue=Math.floor(txtValue/10);
     }
     if(count<5){
-      document.getElementById('p1').innerHTML = "";
+      document.getElementById("p1").style.height="0px";
+      document.getElementById("p1").style.width="0px";
+      document.getElementById("p1").style.borderRadius="0px"
       alert("Error!!!! Enter a 5 digit number");
     }
     else{
