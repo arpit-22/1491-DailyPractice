@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function check_Zip(zipCode){
+        var regex=/^\d{5}$/;
+        if(zipCode.value==" "){
+          alert("Zip code Field cannot be left empty.");
+          zipCode.focus();
+          return false;
+        }
+        if(regex.test(zipCode.value)==false){
+          alert("The length of zip code must be atleast five digits.");
+          zipCode.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <h1>Form Validation using RegExp</h1>
+    <form name="zipvalidate" action="/error">
+      <p>Zip Code: <input type="text" size="5" name="yourzip"></p>
+      <input type="button" value="Validate Zipcode" onClick="if(check_Zip(zipvalidate.yourzip)){alert('Its a valid zipcode')}">
+      <br>
+      <input type="reset">
+    </form>
+  </body>
+</html>

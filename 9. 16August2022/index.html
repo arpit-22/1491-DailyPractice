@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function check(myform){
+        if(myform.myname.value=="" || myform.myname.value==null){
+          alert('Name is mandatory.');
+          myform.myname.focus();
+          return false;
+        }
+        if(myform.myphone.value=="" || myform.myphone.value==null){
+          alert('Phone is mandatory.');
+          myform.myphone.focus();
+          return false;
+        }
+        else{
+          return true;
+        }
+      }
+    </script>
+    <form name="formvalidate" action="welcome.html" method="get" onsubmit="return check(formvalidate)">
+      <input type="text" name="myname" id="myname" placeholder="Name"><br>
+      <input type="text" name="myphone" id="myphone" placeholder="Phone"><br>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
