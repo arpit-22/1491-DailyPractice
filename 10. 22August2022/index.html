@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="err1"></p>
+    <script type="text/javascript">
+      let a=0;
+      a=a+1;
+      try{
+        adddlert("Welcome Guest");
+      }
+      catch(err){
+        document.getElementById("err1").innerHTML=err.message;
+      }
+      a=a+1;
+      document.getElementById("demo").innerHTML=a;
+    </script>
+  </body>
+</html>
