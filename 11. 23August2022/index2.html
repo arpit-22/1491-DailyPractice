@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="f1()">Click</button>
+    <script type="text/javascript">
+      function f1(){
+        async function f(){
+          let promise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("Done!"), 1000);
+            setTimeout(() => reject("Not Done"), 1000);
+          });
+          let result=await promise;
+          alert(result);
+        }
+        f();
+      }
+    </script>
+  </body>
+</html>

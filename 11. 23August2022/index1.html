@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="f1()">Click</button>
+    <script type="text/javascript">
+      function f1(){
+        async function f(){
+          return Promise.resolve(1);
+        }
+        f().then(alert);
+      }
+    </script>
+  </body>
+</html>

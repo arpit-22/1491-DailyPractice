@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="f1()">Click</button>
+    <script type="text/javascript">
+      function f1(){
+        console.log("First");
+        // setTimeout will always call at last inspite where it is called
+        setTimeout(function second(){
+          console.log("Timeout");
+        }, 1000);
+
+        console.log("Final!");
+      }
+    </script>
+  </body>
+</html>
