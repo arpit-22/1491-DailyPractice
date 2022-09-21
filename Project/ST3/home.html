@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <title></title>
+  </head>
+  <body>
+    <div id="nav">
+      <div>Solar Weight</div>
+    </div>
+    <br><br>
+    <div class="nav1">
+      <div class="centre">
+        <label>Enter your weight: </label>
+        &nbsp;
+        <input type="number" id="weight">
+      </div>
+    </div>
+    <section class="cards">
+      <div class="container">
+        <div class="card">
+          <div class="imgBx">
+            <img src="sun.jpg" alt="" onclick="sunWeight()">
+          </div>
+          <div class="content">
+            <h1>SUN</h1>
+            <p id="sun">Click on the picture!!! to get your weight on the sun.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="mercury.jpg" alt="" onclick="mercuryWeight()">
+          </div>
+          <div class="content">
+            <h1>MERCURY</h1>
+            <p id="mercury">Click on the picture!!! to get your weight on the mercury.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="venus.jpg" alt="" onclick="venusWeight()">
+          </div>
+          <div class="content">
+            <h1>VENUS</h1>
+            <p id="venus">Click on the picture!!! to get your weight on the venus.</p>
+            <br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="earth.jpg" alt="" onclick="earthWeight()">
+          </div>
+          <div class="content">
+            <h1>EARTH</h1>
+            <p id="earth">Click on the picture!!! to get your weight on the earth.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="moon.jpg" alt="" onclick="moonWeight()">
+          </div>
+          <div class="content">
+            <h1>MOON</h1>
+            <p id="moon">Click on the picture!!! to get your weight on the moon.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="mars.jpg" alt="" onclick="marsWeight()">
+          </div>
+          <div class="content">
+            <h1>MARS</h1>
+            <p id="mars">Click on the picture!!! to get your weight on the mars.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="jupyter.jpg" alt="" onclick="jupiterWeight()">
+          </div>
+          <div class="content">
+            <h1>JUPITER</h1>
+            <p id="jupiter">Click on the picture!!! to get your weight on the jupiter.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="saturn.jpg" alt="" onclick="saturnWeight()">
+          </div>
+          <div class="content">
+            <h1>SATURN</h1>
+            <p id="saturn">Click on the picture!!! to get your weight on the saturn.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="uranus.jpg" alt="" onclick="uranusWeight()">
+          </div>
+          <div class="content">
+            <h1>URANUS</h1>
+            <p id="uranus">Click on the picture!!! to get your weight on the uranus.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="neptune.jpg" alt="" onclick="neptuneWeight()">
+          </div>
+          <div class="content">
+            <h1>NEPTUNE</h1>
+            <p id="neptune">Click on the picture!!! to get your weight on the neptune.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="pluto.jpg" alt="" onclick="plutoWeight()">
+          </div>
+          <div class="content">
+            <h1>PLUTO</h1>
+            <p id="pluto">Click on the picture!!! to get your weight on the pluto.</p>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+function sunWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*27.01;
+  document.getElementById("sun").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on sun." ;
+}
+function mercuryWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.38;
+  document.getElementById("mercury").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on mercury." ;
+}
+function venusWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.91;
+  document.getElementById("venus").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on venus." ;
+}
+function earthWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  document.getElementById("earth").innerHTML = "Your weight on earth is equal to the weight provide by you i.e " + x + "kg." ;
+}
+function moonWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.166;
+  document.getElementById("moon").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on moon." ;
+}
+function marsWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.38;
+  document.getElementById("mars").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on mars." ;
+}
+function jupiterWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*2.34;
+  document.getElementById("jupiter").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on jupiter." ;
+}
+function saturnWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*1.06;
+  document.getElementById("saturn").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on saturn." ;
+}
+function uranusWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.92;
+  document.getElementById("uranus").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on uranus." ;
+}
+function neptuneWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*1.19;
+  document.getElementById("neptune").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on neptune." ;
+}
+function plutoWeight() {
+  var x=document.getElementById("weight").value;
+  if(!x){
+    x=0;
+  }
+  let w=x*0.06;
+  document.getElementById("pluto").innerHTML = "Your weight on earth is " + x + "kg and you will weigh "+w.toFixed(1)+"kg on pluto." ;
+}
+</script>
+
+  </body>
+</html>
